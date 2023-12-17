@@ -1,16 +1,6 @@
+#!/usr/bin/python3
 """
-Unittests for the State, City, Amenity, Place, and Review classes in the AirBnB Clone.
-
-These tests cover the functionality and attributes of the State, City, Amenity, Place, and Review
-classes, which inherit from the BaseModel class.
-
-To run the tests, execute this file with a Python interpreter.
-
-Example:
-    $ python test_models.py
-
-Classes:
-    - TestModels: Test case class for the State, City, Amenity, Place, and Review classes.
+This module is a unittests for the State, City, Amenity, Place, and Review classes in the AirBnB Clone
 
 """
 
@@ -25,10 +15,10 @@ from models.base_model import BaseModel
 
 
 class TestModels(unittest.TestCase):
-    """Test case class for the State, City, Amenity, Place, and Review classes."""
+    """This class test case class for the State, City, Amenity, Place, and Review classes."""
 
     def test_state(self):
-        """Test the State class."""
+        """This method test the State class."""
         state = State()
         self.assertIsInstance(state, State)
         self.assertIsInstance(state, BaseModel)
@@ -37,7 +27,7 @@ class TestModels(unittest.TestCase):
         self.assertIsInstance(state.updated_at, datetime)
 
     def test_city(self):
-        """Test the City class."""
+        """This method test the City class."""
         city = City()
         self.assertIsInstance(city, City)
         self.assertIsInstance(city, BaseModel)
@@ -47,7 +37,7 @@ class TestModels(unittest.TestCase):
         self.assertIsInstance(city.updated_at, datetime)
 
     def test_amenity(self):
-        """Test the Amenity class."""
+        """This method test the Amenity class."""
         amenity = Amenity()
         self.assertIsInstance(amenity, Amenity)
         self.assertIsInstance(amenity, BaseModel)
@@ -56,7 +46,7 @@ class TestModels(unittest.TestCase):
         self.assertIsInstance(amenity.updated_at, datetime)
 
     def test_place(self):
-        """Test the Place class."""
+        """This method test the Place class."""
         place = Place()
         self.assertIsInstance(place, Place)
         self.assertIsInstance(place, BaseModel)
@@ -75,7 +65,7 @@ class TestModels(unittest.TestCase):
         self.assertIsInstance(place.updated_at, datetime)
 
     def test_review(self):
-        """Test the Review class."""
+        """This method test the Review class."""
         review = Review()
         self.assertIsInstance(review, Review)
         self.assertIsInstance(review, BaseModel)

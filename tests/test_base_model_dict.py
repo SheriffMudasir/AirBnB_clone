@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""This module is the unittest modeule that test the to_dict """
 import unittest
 from models.base_model import BaseModel
 
 class TestBaseModel(unittest.TestCase):
     def test_to_dict(self):
-        """Test the to_dict method of BaseModel."""
+        """This method test the to_dict method of BaseModel."""
         my_model = BaseModel()
         my_model.name = "My_First_Model"
         my_model.my_number = 89
@@ -19,7 +20,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(type(model_dict['updated_at']), str)
 
     def test_init_from_dict(self):
-        """Test initializing a new BaseModel instance from a dictionary."""
+        """This method test initializing a new BaseModel instance from a dictionary."""
         my_model = BaseModel()
         my_model.name = "My_First_Model"
         my_model.my_number = 89
@@ -34,7 +35,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(new_model.updated_at, my_model.updated_at)
 
     def test_str_representation(self):
-        """Test the string representation of BaseModel."""
+        """This method test the string representation of BaseModel."""
         my_model = BaseModel()
         my_model.name = "My_First_Model"
         my_model.my_number = 89
