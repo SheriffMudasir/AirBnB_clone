@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""This is the state module which iherits from BaseModel"""
+"""This module amenity inherits from BaseModel"""
 from models.base_model import BaseModel
 
-class State(BaseModel):
-    """State class"""
+class Amenity(BaseModel):
+    """Amenity class"""
     name = ""
 
     def __init__(self, *args, **kwargs):
-        """Initialization of State"""
+        """Initialization of Amenity"""
         super().__init__(*args, **kwargs)
 

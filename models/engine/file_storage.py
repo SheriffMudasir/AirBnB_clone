@@ -1,13 +1,19 @@
-# models/engine/file_storage.py
-
+#!/usr/bin/python3
+"""This module handle serialization and deserialization"""
 import json
-from models.base_model import BaseModel  # Import BaseModel here
+from models.base_model import BaseModel
+from models.user import User
+
 
 class FileStorage:
     """This class serializes instances to a JSON file and deserializes a JSON file to instances."""
 
     __file_path = "file.json"
     __objects = {}
+    CLASSES = {
+        'BaseModel': BaseModel,
+        'User': User
+    }
 
     def all(self):
         """Returns the dictionary __objects."""
