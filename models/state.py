@@ -3,10 +3,10 @@
 from models.base_model import BaseModel
 
 class State(BaseModel):
-    """State class"""
+    """The mrthod state class"""
     name = ""
 
     def __init__(self, *args, **kwargs):
-        """Initialization of State"""
+        """Handles initialization of State"""
         super().__init__(*args, **kwargs)
 

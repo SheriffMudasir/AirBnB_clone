@@ -7,7 +7,7 @@ from models.base_model import BaseModel
 
 class User(BaseModel):
     """
-    User class that inherits from BaseModel.
+    This method is the uers class that inherits from BaseModel.
     Attributes:
         email (str): empty string
         password (str): empty string
@@ -21,6 +21,6 @@ class User(BaseModel):
     last_name = ""
 
     def __init__(self, *args, **kwargs):
-        """Initialize User instance."""
+        """Handle initialization of  User instance."""
         super().__init__(*args, **kwargs)
 

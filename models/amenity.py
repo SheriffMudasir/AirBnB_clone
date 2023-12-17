@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""This module amenity inherits from BaseModel"""
+"""The module amenity inherits from BaseModel"""
 from models.base_model import BaseModel
 
 class Amenity(BaseModel):
-    """Amenity class"""
+    """The class amenity"""
     name = ""
 
     def __init__(self, *args, **kwargs):
-        """Initialization of Amenity"""
+        """This method handle initialization of Amenity"""
         super().__init__(*args, **kwargs)
 

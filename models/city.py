@@ -3,11 +3,11 @@
 from models.base_model import BaseModel
 
 class City(BaseModel):
-    """City class"""
+    """The method city class"""
     state_id = ""
     name = ""
 
     def __init__(self, *args, **kwargs):
-        """Initialization of City"""
+        """This method handle initialization of City"""
         super().__init__(*args, **kwargs)
 

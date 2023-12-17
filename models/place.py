@@ -3,7 +3,7 @@
 from models.base_model import BaseModel
 
 class Place(BaseModel):
-    """Place class"""
+    """The method place class"""
     city_id = ""
     user_id = ""
     name = ""
@@ -17,6 +17,6 @@ class Place(BaseModel):
     amenity_ids = []
 
     def __init__(self, *args, **kwargs):
-        """Initialization of Place"""
+        """Handles initialization of Place"""
         super().__init__(*args, **kwargs)
 

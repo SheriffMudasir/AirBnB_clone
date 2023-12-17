@@ -10,7 +10,7 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """
-        Constructor for BaseModel class.
+        This is the constructor for BaseModel class.
 
         Args:
             *args: Unused.
@@ -29,14 +29,14 @@ class BaseModel:
             self.created_at = self.updated_at = datetime.now()
 
     def save(self):
-        """Updates the public instance attribute 'updated_at' with the current datetime."""
+        """This method update the public instance attribute 'updated_at' with the current datetime."""
         self.updated_at = datetime.now()
         models.storage.save()
         models.storage.new(self)
 
     def to_dict(self):
         """
-        Returns a dictionary containing all keys/values of __dict__ of the instance.
+        This method returns a dictionary containing all keys/values of __dict__ of the instance.
 
         Returns:
             dict: Dictionary representation of the instance.
@@ -48,7 +48,7 @@ class BaseModel:
         return model_dict
 
     def __str__(self):
-        """String representation of the instance."""
+        """This method returns string representation of the instance."""
         return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
 
