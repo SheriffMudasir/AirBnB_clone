@@ -1,7 +1,7 @@
-#!/usr/bin/python3
-"""This script module serializes instances to a JSON file and deserializes JSON file to
-instances:"""
+# models/engine/file_storage.py
+
 import json
+from models.base_model import BaseModel  # Import BaseModel here
 
 class FileStorage:
     """This class serializes instances to a JSON file and deserializes a JSON file to instances."""
@@ -10,16 +10,16 @@ class FileStorage:
     __objects = {}
 
     def all(self):
-        """This method returns the dictionary __objects."""
+        """Returns the dictionary __objects."""
         return self.__objects
 
     def new(self, obj):
-        """This method sets in __objects the obj with key <obj class name>.id."""
+        """Sets in __objects the obj with key <obj class name>.id."""
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         self.__objects[key] = obj
 
     def save(self):
-        """This method serializes __objects to the JSON file (path: __file_path)."""
+        """Serializes __objects to the JSON file (path: __file_path)."""
         serialized_objects = {}
         for key, obj in self.__objects.items():
             serialized_objects[key] = obj.to_dict()
@@ -38,3 +38,4 @@ class FileStorage:
                     self.__objects[key] = instance
         except FileNotFoundError:
             pass
+

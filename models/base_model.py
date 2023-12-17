@@ -2,7 +2,8 @@
 """This script contains the base_model that defines all common attributes/methods for other classes"""
 import uuid
 from datetime import datetime
-from models import storage
+import models
+
 
 class BaseModel:
     """This class defines all common attributes/methods for other classes."""
@@ -30,8 +31,8 @@ class BaseModel:
     def save(self):
         """Updates the public instance attribute 'updated_at' with the current datetime."""
         self.updated_at = datetime.now()
-        storage.save()
-        storage.new(self)
+        models.storage.save()
+        models.storage.new(self)
 
     def to_dict(self):
         """
