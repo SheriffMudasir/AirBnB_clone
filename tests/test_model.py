@@ -21,6 +21,8 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 from datetime import datetime
+from models.base_model import BaseModel
+
 
 class TestModels(unittest.TestCase):
     """Test case class for the State, City, Amenity, Place, and Review classes."""
